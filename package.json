@@ -1,0 +1,14 @@
+{
+  "name": "primeiro-projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Thiago Couto",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.10.0"
+  }
+}
