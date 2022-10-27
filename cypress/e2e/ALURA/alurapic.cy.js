@@ -35,4 +35,23 @@ describe('Login e registro de usuarios alura pic', () => {
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible')
 
     })
+
+
+    it.only('Realizar cadastro de usuario valido', () => {
+       cy.Cadastro('thiago@qa.com', 'thiago bento', 'thiago', '12345678');
+    //    cy.contains('a', 'Please, login!').should('be.visible');
+    })
+
+    it.only('Fazer login usuario valido', () => {
+       cy.login('thiago', '12345678');
+       cy.contains('a', '(Logout)').should('be.visible');
+    })
+
+    it.only('Fazer login de usuario invalido', () => {
+        cy.login('thiagos', '12345');
+        cy.on('window:alert', (res) => {
+            expect(res).to.equals('Invalid user name or password');
+        })
+    })
+
 })

@@ -9,6 +9,7 @@
   "author": "Thiago Couto",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^10.10.0"
+    "cypress": "^10.10.0",
+    "mochawesome": "^7.1.3"
   }
 }
